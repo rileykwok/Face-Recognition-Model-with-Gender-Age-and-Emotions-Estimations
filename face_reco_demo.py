@@ -19,8 +19,7 @@ video_capture = cv2.VideoCapture(0)
 while True:
 
     bgr_image = video_capture.read()[1]
-    
-    
+        
     if process_this_frame:
         gray_image = cv2.cvtColor(bgr_image, cv2.COLOR_BGR2GRAY)
         rgb_image = cv2.cvtColor(bgr_image, cv2.COLOR_BGR2RGB)
