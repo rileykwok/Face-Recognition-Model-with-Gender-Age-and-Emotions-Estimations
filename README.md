@@ -40,24 +40,24 @@ The prototype is designed to be implemented in the retail industry for different
 |**Language**| Python|Python|Python|Python|
 
 ## Results
-With Donald Trump's and Barack Obama's faces trained in the SVM classifer, the face recognition system is able to identify them in the photo with emotion predicted. For untrained faces, e.g. Melania Trump's, Michelle Obama's and the guard's faces, the system classfied them as 'unknown' and predicted their gender, age and emotion.
+[Left] System detected new customer face at promotion booth and shows the estimated gender, age and emotion.
+<br>[Right] Video shows how a known customer is being identified and how his emotion is being tracked. 
 
-<photo>
+<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/img/promotion1.png" width="300" height="300">       <img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/img/supermarket.gif" width="300">
 
-This shows how a customer may respond emotionally to different products in-store and how the system is able to track his emotions.
-<gif>
+
+We have trained the system on some celebrities and some of our friends, we noted that in some cases that the 2 face vectors of 2 different people were even located closer then each other (euclidean distance) than two photos of one person. From what we tested, using 5+ photos per person with clean, clear, front facing faces would produce better results for identity estimates. 
+
+The SVM classifier is also prefered over KNN classifier as they produce slightly better estimation. It also provides a confidence score per estimate which allows us to set a threshold to categorize known or new faces. The confidence score threshold we experimented that works best is 0.3.
+
+<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/img/pca.png" width="600">
 
 ## References
 Face Detection and Alignment: 
 [DLib](http://dlib.net/) and
 [OpenCV:](https://opencv.org/)
-<br>Face Recognition Model: 
+<br>Face Recognition Models: 
 <br>[OpenFace/ Facenet nn4.small model](https://cmusatyalab.github.io/openface/models-and-accuracies/#model-definitions)
-<br>[Emotion Prediction Model](https://github.com/oarriaga/face_classification)
-<br>[Age/Gender Prediction Model](https://www.dlology.com/blog/easy-real-time-gender-age-prediction-from-webcam-video-with-keras/)
-
-
-
-
-
+<br>[Oarriaga/ mini_XCEPTION Emotion Model](https://github.com/oarriaga/face_classification)
+<br>[WideResNet Age_Gender_Model](https://www.dlology.com/blog/easy-real-time-gender-age-prediction-from-webcam-video-with-keras/)
 
