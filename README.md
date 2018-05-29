@@ -50,14 +50,14 @@ The prototype is designed to be implemented in the retail industry for different
 [Left] System detected new customer face at promotion booth and shows the estimated gender, age and emotion.
 <br>[Right] Video shows how a known customer is being identified and how his emotion is being tracked. 
 
-<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/img/promotion1.png" width="300" height="300">       <img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/img/supermarket.gif" width="300">
+<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/sample/promotion1.png" width="300" height="300">       <img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/sample/supermarket.gif" width="300">
 
 
 We have trained the system on some celebrities and some of our friends, we noted that in some cases that the 2 face vectors of 2 different people were even located closer then each other (euclidean distance) than two photos of one person. From what we tested, using 5+ photos per person with clean, clear, front facing faces would produce better results for identity estimates. 
 
 The SVM classifier is also prefered over KNN classifier as they produce slightly better estimation. It also provides a confidence score per estimate which allows us to set a threshold to categorize known or new faces. The confidence score threshold we experimented that works best is 0.3.
 
-<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/img/pca.png" width="800">
+<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/sample/pca.png" width="800">
 
 ## References
 Face Detection: [DLib](http://dlib.net/) and
@@ -87,18 +87,22 @@ python face_reco_video.py
 **Image:**
 ```
 face = FaceImage()
-display_labeled_image(face, "sample/photo.jpg")
+display_labeled_image(face, "sample/sample01.jpg")
 ```
 **Video to video:**
 ```
-labeled_video = FaceVideo("sample/video.mov")
-labeled_video.create_mp4_video("samplevid.mp4")
+labeled_video = FaceVideo("sample/sample02.mp4")
+labeled_video.create_mp4_video("sample02vid.mp4")
 ```
 **Video to GIF:**
 ```
-labeled_video = FaceVideo("sample/video.mov")
-labeled_video.create_animated_gif("samplegif.gif")
+labeled_video = FaceVideo("sample/sample02.mp4")
+labeled_video.create_animated_gif("sample02gif.gif")
 ```
 **To train new faces for face identification:**<br>
 Import photos to `faces/name_of_person/001.jpg` and run the codes again.
 
+**To visualise face vectors of trained faces (using t-SNE dimension reduction):**
+```
+face_recognizer.visualize_dataset()
+```
