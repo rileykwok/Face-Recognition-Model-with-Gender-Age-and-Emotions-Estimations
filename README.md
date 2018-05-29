@@ -50,14 +50,14 @@ We have trained the system on some celebrities and some of our friends, we noted
 
 The SVM classifier is also prefered over KNN classifier as they produce slightly better estimation. It also provides a confidence score per estimate which allows us to set a threshold to categorize known or new faces. The confidence score threshold we experimented that works best is 0.3.
 
-<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/img/pca.png" width="600">
+<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/img/pca.png" width="800">
 
 ## References
-Face Detection and Alignment: 
-[DLib](http://dlib.net/) and
-[OpenCV:](https://opencv.org/)
+Face Detection: [DLib](http://dlib.net/) and
+<br>Face Alignment: [OpenCV:](https://opencv.org/)
 <br>Face Recognition Models: 
 <br>[OpenFace/ Facenet nn4.small model](https://cmusatyalab.github.io/openface/models-and-accuracies/#model-definitions)
 <br>[Oarriaga/ mini_XCEPTION Emotion Model](https://github.com/oarriaga/face_classification)
 <br>[WideResNet Age_Gender_Model](https://www.dlology.com/blog/easy-real-time-gender-age-prediction-from-webcam-video-with-keras/)
-
+<br>Face Recogition Explained and Codes: [Karasserm](http://krasserm.github.io/2018/02/07/deep-face-recognition/)
+<br>Age/Gender Prediction Explained and Codes: [Chengwei](https://www.dlology.com/blog/easy-real-time-gender-age-prediction-from-webcam-video-with-keras/)
