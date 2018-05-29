@@ -57,7 +57,7 @@ We have trained the system on some celebrities and some of our friends, we noted
 
 The SVM classifier is also prefered over KNN classifier as they produce slightly better estimation. It also provides a confidence score per estimate which allows us to set a threshold to categorize known or new faces. The confidence score threshold we experimented that works best is 0.3.
 
-<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/sample/pca.png" width="800">
+<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/sample/visualisation-t-SNE.png" width="500">
 
 ## References
 Face Detection: [DLib](http://dlib.net/) and
