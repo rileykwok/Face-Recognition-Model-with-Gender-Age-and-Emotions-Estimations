@@ -60,7 +60,7 @@ The SVM classifier is also prefered over KNN classifier as they produce slightly
 <img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/sample/visualisation-t-SNE.png" width="500">
 
 ## References
-Face Detection: [DLib](http://dlib.net/) and
+Face Detection: [DLib](http://dlib.net/)
 <br>Face Alignment: [OpenCV:](https://opencv.org/)
 <br>Face Recognition Models: 
 <br>[OpenFace/ Facenet nn4.small model](https://cmusatyalab.github.io/openface/models-and-accuracies/#model-definitions)
@@ -89,6 +89,8 @@ python face_reco_video.py
 face = FaceImage()
 display_labeled_image(face, "sample/sample01.jpg")
 ```
+<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/sample/sample01result.jpg" width="400">
+
 **Video to video:**
 ```
 labeled_video = FaceVideo("sample/sample02.mp4")
@@ -99,6 +101,8 @@ labeled_video.create_mp4_video("sample02vid.mp4")
 labeled_video = FaceVideo("sample/sample02.mp4")
 labeled_video.create_animated_gif("sample02gif.gif")
 ```
+<img src="https://github.com/rileykwok/Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations/blob/master/sample/sample02gif.gif" width="400">
+
 **To train new faces for face identification:**<br>
 Import photos to `faces/name_of_person/001.jpg` and run the codes again.
 
