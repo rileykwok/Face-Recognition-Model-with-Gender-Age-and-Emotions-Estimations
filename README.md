@@ -1,6 +1,13 @@
 # Face-Recognition-Model-with-Gender-Age-and-Emotions-Estimations
 Capstone Project by [Bertrand Lee](https://github.com/bertrandlee) and [Riley Kwok](https://github.com/rileykwok)
 
+## Table of Contents
++ [About](#about)
++ [Technical System Architecture](#technical-system-architecture)
++ [Results](#results)
++ [References](#references)
++ [Installations](#installations)
+
 ## About
 
 We created a prototype face recognition system based on three pre-trained CNN models that is able to identify faces and predict their gender, age and emotions in an image or video. 
@@ -61,3 +68,37 @@ Face Detection: [DLib](http://dlib.net/) and
 <br>[WideResNet Age_Gender_Model](https://www.dlology.com/blog/easy-real-time-gender-age-prediction-from-webcam-video-with-keras/)
 <br>Face Recogition Explained and Codes: [Karasserm](http://krasserm.github.io/2018/02/07/deep-face-recognition/)
 <br>Age/Gender Prediction Explained and Codes: [Chengwei](https://www.dlology.com/blog/easy-real-time-gender-age-prediction-from-webcam-video-with-keras/)
+
+## Installations
+To run the model, please install the required python packages using
+```
+pip install -r requirements.txt
+```
+**To run real-time demo:**
+```
+python face_reco_demo.py
+```
+**To run face recognition model:**<br>
+```
+python face_reco_base.py
+python face_reco_image.py
+python face_reco_video.py
+```
+**Image:**
+```
+face = FaceImage()
+display_labeled_image(face, "sample/photo.jpg")
+```
+**Video to video:**
+```
+labeled_video = FaceVideo("sample/video.mov")
+labeled_video.create_mp4_video("samplevid.mp4")
+```
+**Video to GIF:**
+```
+labeled_video = FaceVideo("sample/video.mov")
+labeled_video.create_animated_gif("samplegif.gif")
+```
+**To train new faces for face identification:**
+Import photos to `images/name_of_person/001.jpg` and run the codes again.
+
