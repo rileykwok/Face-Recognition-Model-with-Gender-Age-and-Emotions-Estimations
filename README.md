@@ -99,6 +99,6 @@ labeled_video.create_mp4_video("samplevid.mp4")
 labeled_video = FaceVideo("sample/video.mov")
 labeled_video.create_animated_gif("samplegif.gif")
 ```
-**To train new faces for face identification:**
+**To train new faces for face identification:**<br>
 Import photos to `images/name_of_person/001.jpg` and run the codes again.
 
