@@ -1,0 +1,10 @@
+tensorflow==1.7.0
+opencv_python==3.4.0.12
+pandas==0.22.0
+Keras==2.1.6
+scipy==1.1.0
+matplotlib==2.1.2
+imageio==2.3.0
+numpy==1.14.3
+dlib==19.13.0
+scikit_learn==0.19.1
